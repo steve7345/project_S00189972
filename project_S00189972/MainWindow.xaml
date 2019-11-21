@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:project_S00189972"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Activity Planner" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid x:Name="TblkShowDescription" RenderTransformOrigin="0.511,0.504">
+        <ListBox x:Name="lbxActivities" HorizontalAlignment="Left" Height="231" Margin="126,80,0,0" VerticalAlignment="Top" Width="230" SelectionChanged="LbxActivities_SelectionChanged"/>
+        <ListBox x:Name="lbxCart" HorizontalAlignment="Left" Height="231" Margin="494,80,0,0" VerticalAlignment="Top" Width="238"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="382,157,0,0" VerticalAlignment="Top" Width="88"/>
+        <Button x:Name="btnRemove" Content="Remove" HorizontalAlignment="Left" Margin="382,226,0,0" VerticalAlignment="Top" Width="88"/>
+        <TextBlock HorizontalAlignment="Left" Margin="126,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.204,2.062" Width="202" Height="30" FontSize="25" FontWeight="Bold" FontStyle="Italic" TextDecorations="{x:Null}" Foreground="#FF00B9FF" Text="Activity Planner" FontFamily="Rockwell"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="20,117,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="20,157,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="20,199,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="20,231,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.871,-0.4"/>
+        <TextBlock x:Name="xxx" HorizontalAlignment="Left" Margin="126,341,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" RenderTransformOrigin="-0.184,0" Width="176" Height="23"/>
+        <TextBlock x:Name="TblkShowDespription" HorizontalAlignment="Left" Margin="126,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+
     </Grid>
 </Window>
