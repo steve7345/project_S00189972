@@ -5,19 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:project_S00189972"
         mc:Ignorable="d"
-        Title="Activity Planner" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="Activity Planner" Height="446" Width="800" Loaded="Window_Loaded">
     <Grid x:Name="TblkShowDescription" RenderTransformOrigin="0.511,0.504">
-        <ListBox x:Name="lbxActivities" HorizontalAlignment="Left" Height="231" Margin="126,80,0,0" VerticalAlignment="Top" Width="230" SelectionChanged="LbxActivities_SelectionChanged"/>
-        <ListBox x:Name="lbxCart" HorizontalAlignment="Left" Height="231" Margin="494,80,0,0" VerticalAlignment="Top" Width="238"/>
-        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="382,157,0,0" VerticalAlignment="Top" Width="88"/>
-        <Button x:Name="btnRemove" Content="Remove" HorizontalAlignment="Left" Margin="382,226,0,0" VerticalAlignment="Top" Width="88"/>
-        <TextBlock HorizontalAlignment="Left" Margin="126,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.204,2.062" Width="202" Height="30" FontSize="25" FontWeight="Bold" FontStyle="Italic" TextDecorations="{x:Null}" Foreground="#FF00B9FF" Text="Activity Planner" FontFamily="Rockwell"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="20,117,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="20,157,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="20,199,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="20,231,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.871,-0.4"/>
-        <TextBlock x:Name="xxx" HorizontalAlignment="Left" Margin="126,341,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" RenderTransformOrigin="-0.184,0" Width="176" Height="23"/>
-        <TextBlock x:Name="TblkShowDespription" HorizontalAlignment="Left" Margin="126,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="57"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="lbxActivities" HorizontalAlignment="Left" Height="231" Margin="69,80,0,0" VerticalAlignment="Top" Width="230" SelectionChanged="LbxActivities_SelectionChanged" Grid.Column="1"/>
+        <ListBox x:Name="lbxCart" HorizontalAlignment="Left" Height="231" Margin="437,80,0,0" VerticalAlignment="Top" Width="238" Grid.Column="1"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="325,157,0,0" VerticalAlignment="Top" Width="88" Click="BtnAdd_Click" Grid.Column="1"/>
+        <Button x:Name="btnRemove" Content="Remove" HorizontalAlignment="Left" Margin="325,226,0,0" VerticalAlignment="Top" Width="88" Click="BtnRemove_Click" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="69,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.204,2.062" Width="202" Height="30" FontSize="25" FontWeight="Bold" FontStyle="Italic" TextDecorations="{x:Null}" Foreground="#FF00B9FF" Text="Activity Planner" FontFamily="Rockwell" Grid.Column="1"/>
+        <RadioButton x:Name="rbAll" Content="All" HorizontalAlignment="Left" Margin="20,117,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Click="RbAll_Click"/>
+        <RadioButton x:Name="rbLand" Content="Land" HorizontalAlignment="Left" Margin="20,157,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Click="RbAll_Click"/>
+        <RadioButton x:Name="rbWater" Content="Water" HorizontalAlignment="Left" Margin="20,199,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Click="RbAll_Click"/>
+        <RadioButton x:Name="rbAir" Content="Air" HorizontalAlignment="Left" Margin="19,243,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.871,-0.4" Click="RbAll_Click"/>
+        <TextBlock x:Name="xxx" HorizontalAlignment="Left" Margin="69,316,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" RenderTransformOrigin="-0.184,0" Width="176" Height="23" Grid.Column="1"/>
+        <TextBlock x:Name="TblkShowDespription" HorizontalAlignment="Left" Margin="69,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="58" Grid.Column="1"/>
+        <TextBlock x:Name="TblkCost" Grid.Column="1" HorizontalAlignment="Left" Margin="520,27,0,0" TextWrapping="Wrap" Text="Total cost" VerticalAlignment="Top" RenderTransformOrigin="1.54,-0.812"/>
+        <TextBlock x:Name="TblkTotalCost" Grid.Column="1" HorizontalAlignment="Left" Margin="594,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.699"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="584,27,0,0" TextWrapping="Wrap" Text="€" VerticalAlignment="Top" Width="9" RenderTransformOrigin="2.25,-0.375"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="69,59,0,0" TextWrapping="Wrap" Text="Activities" VerticalAlignment="Top" Width="120"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="437,59,0,0" TextWrapping="Wrap" Text="Selected Activities" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>
